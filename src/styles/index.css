@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+:root {
+  /* Primary brand colors (inspired by confident, tech-savvy, creative energy) */
+  --color-primary: #6c5ce7;
+  /* electric purple */
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #00cec9;
+  /* teal/aqua pop */
+  --color-secondary-foreground: #000000;
+
+  --color-accent: #fd79a8;
+  /* vibrant pink for highlights or actions */
+  --color-accent-foreground: #ffffff;
+
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #555;
+
+  --color-background: #ffffff;
+  --color-foreground: #1e1e1e;
+
+  /* Dark mode overrides (optional) */
+  .dark & {
+    --color-background: #121212;
+    --color-foreground: #f8f8f8;
+
+    --color-muted: #1e1e1e;
+    --color-muted-foreground: #aaa;
+
+    --color-primary: #a29bfe;
+    --color-secondary: #81ecec;
+    --color-accent: #fab1a0;
+  }
+}
