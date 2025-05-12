@@ -1,37 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap");
+
 @import "tailwindcss";
 
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+@source inline("col-start-{1..3}");
+@source inline("col-span-{1..3}");
 
-:root {
-  /* Primary brand colors (inspired by confident, tech-savvy, creative energy) */
-  --color-primary: #6c5ce7;
-  /* electric purple */
-  --color-primary-foreground: #ffffff;
+@theme {
+  /* Primary – Edekit Neon Green */
+  --color-primary-edekit: #32f5a3;
+  --color-primary-edekit-dark: #1fd39b;
+  --color-primary-edekit-80: #57f7b4;
+  --color-primary-edekit-60: #7af9c6;
+  --color-primary-edekit-40: #9dfbd7;
+  --color-primary-edekit-20: #c0fce8;
 
-  --color-secondary: #00cec9;
-  /* teal/aqua pop */
-  --color-secondary-foreground: #000000;
+  /* Other Neutrals */
+  --color-primary-black: #0f0f0f;
+  --color-primary-white: #ffffff;
+  --color-primary-charcoal: #1a1a1a;
+  --color-primary-lightgrey: #e2e2e2;
 
-  --color-accent: #fd79a8;
-  /* vibrant pink for highlights or actions */
-  --color-accent-foreground: #ffffff;
+  /* Error */
+  --color-error: #ff6b6b;
+  --color-error-dark: #e53935;
 
-  --color-muted: #f5f5f5;
-  --color-muted-foreground: #555;
+  /* Input */
+  --color-caret: var(--color-primary-edekit);
+  --color-caret-dark: var(--color-primary-edekit-dark);
+  --color-input-outline: var(--color-primary-edekit);
+  --color-input-outline-dark: var(--color-primary-edekit-dark);
 
-  --color-background: #ffffff;
-  --color-foreground: #1e1e1e;
+  /* Secondary – Gradient-inspired */
+  /* Services - Electric Blue */
+  --color-secondary-services: #3a7bfd;
+  --color-secondary-services-dark: #2364e4;
+  --color-secondary-services-80: #6398fe;
+  --color-secondary-services-60: #8bb5fe;
+  --color-secondary-services-40: #b3d2ff;
 
-  /* Dark mode overrides (optional) */
-  .dark & {
-    --color-background: #121212;
-    --color-foreground: #f8f8f8;
+  /* Bookings - Hot Orange */
+  --color-secondary-bookings: #ff914d;
+  --color-secondary-bookings-dark: #e67d3a;
+  --color-secondary-bookings-80: #ffa36b;
+  --color-secondary-bookings-60: #ffb58a;
+  --color-secondary-bookings-40: #ffc8a8;
 
-    --color-muted: #1e1e1e;
-    --color-muted-foreground: #aaa;
+  /* Products - Violet */
+  --color-secondary-products: #c084fc;
+  --color-secondary-products-dark: #a855f7;
+  --color-secondary-products-80: #cf9dfd;
+  --color-secondary-products-60: #dbb6fe;
+  --color-secondary-products-40: #e8cffe;
 
-    --color-primary: #a29bfe;
-    --color-secondary: #81ecec;
-    --color-accent: #fab1a0;
-  }
+  /* Community - Pink */
+  --color-secondary-community: #f472b6;
+  --color-secondary-community-dark: #ec4899;
+  --color-secondary-community-80: #f687c1;
+  --color-secondary-community-60: #f89bcc;
+  --color-secondary-community-40: #fab0d7;
+
+  /* Fonts */
+  --font-family-sans: "Outfit", sans-serif;
 }
