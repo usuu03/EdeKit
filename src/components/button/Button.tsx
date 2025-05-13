@@ -2,22 +2,22 @@ import type React from "react";
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/util";
-
 const buttonVariants = cva(
 	"font-family-sans inline-flex items-center justify-center border-0 rounded-md text-md font-medium transition-colors duration-500 focus:outline-none focus:ring-1 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
 	{
 		variants: {
 			variant: {
 				default:
-					"bg-primary-edekit shadow-md hover:bg-primary-edekit-dark dark:bg-primary-edekit-dark",
+					"bg-primary-edekit shadow-md hover:bg-primary-edekit-dark dark:bg-primary-edekit-dark dark:hover:bg-primary-edekit",
 				destructive:
-					"bg-red-700 text-white shadow-xs hover:bg-red-800 focus-visible:ring-red-500",
+					"bg-red-700 text-white shadow-xs hover:bg-red-800 focus-visible:ring-red-500 dark:bg-red-800 dark:hover:bg-red-900",
 				outline:
-					"border border-primary-lightgrey text-primary-charcoal hover:bg-primary-lightgrey hover:border-primary-charcoal",
+					"border border-primary-lightgrey text-primary-charcoal hover:bg-primary-lightgrey hover:border-primary-charcoal dark:border-primary-lightgrey/40 dark:text-white dark:hover:bg-primary-charcoal/20",
 				secondary:
-					"bg-secondary-services text-primary-charcoal hover:bg-secondary-services-dark",
-				ghost: "bg-transparent text-primary-techary hover:bg-primary-lightgrey",
-				link: "bg-transparent text-secondary-resources hover:text-secondary-resources-dark underline",
+					"bg-secondary-services text-primary-charcoal hover:bg-secondary-services-dark dark:bg-secondary-services-dark dark:text-white dark:hover:bg-secondary-services-80",
+				ghost:
+					"bg-transparent text-primary-techary hover:bg-primary-lightgrey dark:text-primary-techary-dark dark:hover:bg-white/10 dark:text-white",
+				link: "bg-transparent text-secondary-resources hover:text-secondary-resources-dark underline dark:text-secondary-resources-80 dark:text-white dark:hover:text-secondary-resources",
 			},
 			size: {
 				default: "h-9 px-4 py-2 has-[>svg]:px-3",
